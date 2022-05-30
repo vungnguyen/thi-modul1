@@ -8,19 +8,24 @@
 <script>
 
     function checkNumber(number,arr) {
+        let index = -1;
+
         for (let i =0; i < arr.length ; i++) {
-            if (arr[i] === number) {
-                index = i;
-                break;
+            if (number === arr[i]) {
+               index = i ;
+                return i;
             }
         }
-        if (index=== -1) {
-            alert('không tìm thấy');
-        }else {
-
+        if (index === -1) {
+            return 'không có trong mảng'
         }
 
     }
+    let arr = [1,2,3,6,8];
+    let number = +prompt('nhập vào số');
+    alert(checkNumber(number,arr));
+
+
 </script>
 </body>
 </html>
